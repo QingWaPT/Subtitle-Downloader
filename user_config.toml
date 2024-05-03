@@ -4,7 +4,7 @@ locale = '' # en/zh-Hant; default: system locale
 [subtitles]
 default-language = 'all' # all/en/zh-Hant/zh-Hans/zh-HK/ja/ko
 default-format = '.srt'  # .srt/.ass/.vtt
-archive = true           # true/false
+archive = false           # true/false
 fix-subtitle = true      # true/false
 
 # Default cookies dir: Subtitle-Downloader/cookies

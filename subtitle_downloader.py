@@ -19,7 +19,7 @@ from utils.helper import get_locale
 from utils.io import load_toml
 
 
-def main() -> None:
+def main(raw_args=None) -> None:
     _ = get_locale('main')
 
     support_services = ', '.join(sorted([v for k, v in Service.__dict__.items()
@@ -92,7 +92,7 @@ def main() -> None:
         help=_("app's version")
     )
 
-    args = parser.parse_args()
+    args = parser.parse_args(raw_args)
 
     if args.debug:
         os.makedirs(directories.logs, exist_ok=True)

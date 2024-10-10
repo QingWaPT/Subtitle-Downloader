@@ -29,8 +29,8 @@ def get_proxy(region: str, geofence: list, platform: str) -> Optional[str]:
 
     logger.info('Obtaining a proxy to "%s"', region)
 
-    if get_ip_info()['country'].lower() == ''.join(i for i in region if not i.isdigit()):
-        return None  # no proxy necessary
+    # if get_ip_info()['country'].lower() == ''.join(i for i in region if not i.isdigit()):
+    #     return None  # no proxy necessary
 
     if config.proxies.get(region):
         proxy = config.proxies[region]

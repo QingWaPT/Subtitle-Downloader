@@ -74,6 +74,10 @@ cookies = 'www.youtube.com_cookies.txt'
 # If you don't want any, just have this section blank or remove the [proxies] entirely
 # us = 'http://127.0.0.1:7890' # Clash
 
+tw = 'http://127.0.0.1:7890'
+hk = 'http://127.0.0.1:7890'
+th = 'http://127.0.0.1:7890'
+
 [nordvpn]
 # Like `proxies` above, this does the same thing except it automatically generates a proxy string
 # for a nordvpn server automatically.

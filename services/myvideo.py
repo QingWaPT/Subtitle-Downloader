@@ -73,9 +73,9 @@ class MyVideo(BaseService):
                 res = self.session.get(season['url'], timeout=5)
                 if res.ok:
                     soup = BeautifulSoup(res.text, 'html.parser')
-                    for episode in soup.find_all('span', class_='episodeIntro'):
+                    for episode in soup.find_all('span', class_='episodeIntro movieIntro'):
                         episode = episode.find('a')
-                        episode_search = re.search(r'第(\d+)集', episode.text)
+                        episode_search = re.search(r'第(\d+)(?:集|話)', episode.text)
                         if episode_search and not '預告' in episode.text:
                             episode_list.append({
                                 'index': int(episode_search.group(1)),
